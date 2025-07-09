@@ -1,0 +1,68 @@
+.input_wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.input {
+  width: 100%;
+  padding: 16px 50px 16px 16px;
+  border: none;
+  background-color: rgb(237, 242, 247);
+
+  font-size: 16px;
+  color: rgb(122, 130, 138);
+  outline: none;
+  box-sizing: border-box;
+  height: 52px;
+}
+
+.input_wrapper .input_success {
+  border-color: rgb(9, 172, 0);
+}
+.input_wrapper .input_fail {
+  border-bottom-color: rgb(255, 71, 71);
+}
+
+.input_region {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 20px;
+  padding-right: 50px;
+}
+
+.icon {
+  position: absolute;
+  right: 16px;
+  top: 24px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.icon_success {
+  color: rgb(9, 172, 0);
+  font-size: 18px;
+  font-weight: bold;
+}
+.icon_fail {
+  color: rgb(255, 71, 71);
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.error_message {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-top: 8px;
+  color: rgb(255, 71, 71);
+  font-size: 12px;
+}
+
+.error_icon {
+  width: 16px;
+  height: 16px;
+  color: rgb(255, 71, 71);
+  border: none;
+}

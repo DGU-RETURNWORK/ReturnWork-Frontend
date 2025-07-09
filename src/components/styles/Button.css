@@ -1,0 +1,34 @@
+.Button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 45px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(1, 70, 177);
+  color: white;
+}
+.Button:hover {
+  cursor: pointer;
+}
+
+.Button_inactive {
+  background-color: rgb(228, 238, 252);
+}
+
+.Button_small {
+  width: 85;
+}
+.Button_medium {
+  width: 140px;
+}
+
+.Button .icon {
+  margin-top: 3px;
+  font-size: 22px;
+}
+.Button .text {
+  font-size: 16px;
+}
