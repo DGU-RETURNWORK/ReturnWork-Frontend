@@ -1,0 +1,37 @@
+/* 기본 라벨 스타일 */
+label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #111;
+}
+
+/* 셀렉트 박스 스타일 */
+select {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 14px;
+  border: 1px solid #D1D5DB; /* 연한 회색 */
+  border-radius: 8px;
+  background-color: #fff;
+  color: #111;
+  outline: none;
+  appearance: none; /* 기본 화살표 제거 (크롬 등) */
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23666' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 12px;
+  cursor: pointer;
+}
+
+/* 포커스 시 */
+select:focus {
+  border-color: #92b5ff; /* 파란색 */
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+/* 옵션 */
+option {
+  font-size: 14px;
+}
