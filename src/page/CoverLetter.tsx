@@ -2,15 +2,17 @@
 
 import styled from "styled-components";
 import Header from "../components/Header";
-import CoverLetterInputPanel from "../components/CoverLetterInputPanel";
-
+import CoverLetterForm from "../components/CoverLetterForm";
+import CoverLetterPanel from '../components/CoverLetterPanel.tsx';
 function CoverLetter() {
   return (
     <>
       <Header isLogin={true} userName="송민교" />
       <Wrapper>
         <PanelWrapper>
-          <CoverLetterInputPanel />
+          <CoverLetterForm />
+          <CoverLetterPanel />
+
         </PanelWrapper>
       </Wrapper>
     </>
@@ -34,8 +36,10 @@ const Title = styled.h1`
   margin-bottom: 24px;
 `;
 
+
 const PanelWrapper = styled.div`
   width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between; /* 좌우 분리 */
+  gap: 24px; /* 패널 사이 간격 */
 `;
