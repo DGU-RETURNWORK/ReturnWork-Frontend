@@ -1,5 +1,5 @@
 // components/common/LabeledSelect.tsx
-import "./styles/LabeledSelect.css";
+import "./LabeledSelect.css";
 
 type LabeledSelectProps = {
   label: string;

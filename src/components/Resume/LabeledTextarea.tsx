@@ -1,5 +1,5 @@
 // components/common/LabeledTextarea.tsx
-import "./styles/LabeledTextarea.css";
+import "./LabeledTextarea.css";
 
 type LabeledTextareaProps = {
     label: string;

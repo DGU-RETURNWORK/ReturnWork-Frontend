@@ -37,39 +37,58 @@
 .question-footer {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 12px;
   margin-top: 12px;
+  flex-wrap: nowrap;
+  width: 100%;
 }
 
 .question-dropdown {
+  width: 84px;
   border: 1px solid #d1d5db;
   background-color: white;
-  border-radius: 9999px;
-  padding: 8px 16px;
+  border-radius: 12px;
+  padding: 8px 10px;
   font-size: 14px;
   appearance: none;
   cursor: pointer;
+  text-align: center;
+  color: #374151;
 }
 
 .char-count-display {
-  flex: 1;
-  padding: 8px;
-  border: none;
+  width: 90px;
+  height: 40px;
+  border: 1px solid #d1d5db;
   background-color: #f3f4f6;
   border-radius: 8px;
-  color: #6b7280;
+  color: #374151;
   text-align: center;
   font-size: 14px;
+  -moz-appearance: textfield;
+}
+.char-count-display::-webkit-inner-spin-button,
+.char-count-display::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .confirm-button {
+  width: 150px;
+  height: 40px;
   background-color: #1d4ed8;
   color: white;
-  padding: 8px 16px;
+  padding: 0;
   border-radius: 8px;
   border: none;
   font-size: 14px;
   cursor: pointer;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
 }
 
 .confirm-button:hover {

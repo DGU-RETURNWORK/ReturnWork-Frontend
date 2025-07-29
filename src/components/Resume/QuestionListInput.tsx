@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./styles/QuestionListInput.css";
+import "./QuestionListInput.css";
 
 type QuestionItem = {
     question: string;
