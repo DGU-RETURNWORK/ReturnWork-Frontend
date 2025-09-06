@@ -1,10 +1,14 @@
 .RoundButton {
-  height: 45px;
-  padding: 16px 24px;
+  height: 48px;
+  padding: 12px 32px;
   border: none;
-  border-radius: 90px;
-  background-color: rgb(1, 70, 177);
+  border-radius: 8px;
+  background-color: #0146B1;
   color: white;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(1, 70, 177, 0.3);
 }
 .RoundButton:hover {
   cursor: pointer;
@@ -21,7 +25,8 @@
   width: 300px;
 }
 .RoundButton_large {
-  width: 425px;
+  width: 200px;
+  height: 48px;
 }
 
 .RoundButton .text {

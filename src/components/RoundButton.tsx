@@ -10,7 +10,7 @@ interface RoundButtonProps {
 const RoundButton = ({
   text,
   status = "active",
-  size,
+  size="small",
   onClick,
 }: RoundButtonProps) => {
   return (

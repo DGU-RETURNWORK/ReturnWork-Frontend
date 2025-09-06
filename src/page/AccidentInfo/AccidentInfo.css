@@ -1,0 +1,257 @@
+/* AccidentInfo 페이지 스타일 */
+.AccidentInfo {
+  min-height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 헤더 영역 */
+.AccidentInfo .wrapper_user button:last-child {
+  display: none;
+}
+
+/* 메인 콘텐츠 영역 */
+.AccidentInfo_content {
+  flex: 1;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.AccidentInfo_title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/* 폼 영역 */
+.AccidentInfo_form {
+  display: flex;
+  gap: 60px;
+  margin: 30px 0 50px 0;
+  align-items: flex-start;
+}
+
+.AccidentInfo_form_left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.AccidentInfo_form_row {
+  display: flex;
+  gap: 24px;
+}
+
+.AccidentInfo_form_row > div {
+  flex: 1;
+}
+
+.AccidentInfo_field_with_warning {
+  display: flex;
+  flex-direction: column;
+}
+
+.AccidentInfo_label_with_icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.label-warning-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+
+}
+
+
+
+.field-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c3e50;
+  letter-spacing: -0.3px;
+}
+
+.AccidentInfo_select {
+  width: 100%;
+  padding: 14px 40px 14px 18px;
+  border: 2px solid #e8ecf0;
+  border-radius: 12px;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #2c3e50;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+}
+
+.AccidentInfo_select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+  transform: translateY(-1px);
+}
+
+.AccidentInfo_select:hover {
+  border-color: #bdc3c7;
+}
+
+.AccidentInfo_form_right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.AccidentInfo_textarea_wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.AccidentInfo_textarea_label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 12px;
+  letter-spacing: -0.3px;
+}
+
+.AccidentInfo_textarea {
+  flex: 1;
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid #e8ecf0;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 200px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  color: #2c3e50;
+}
+
+
+
+.AccidentInfo_textarea::placeholder {
+  color: #95a5a6;
+  font-style: italic;
+}
+
+/* 액션 버튼 영역 */
+.AccidentInfo_actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: -40px;
+}
+
+.AccidentInfo_button_wrapper {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.AccidentInfo_step {
+  font-size: 12px;
+  color: #666666;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+/* 푸터 영역 */
+.AccidentInfo_footer {
+  margin-top: auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.AccidentInfo_copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 14px;
+  color: #666666;
+}
+
+.AccidentInfo_links {
+  display: flex;
+  gap: 20px;
+}
+
+.AccidentInfo_links a {
+  color: #666666;
+  text-decoration: none;
+}
+
+
+/* LabeledSelect 스타일 오버라이드 */
+.AccidentInfo .mb-4 {
+  margin-bottom: 0;
+}
+
+.AccidentInfo .block {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 8px;
+}
+
+.AccidentInfo select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #333333;
+  transition: border-color 0.2s ease;
+}
+
+
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .AccidentInfo_form {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .AccidentInfo_form_row {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .AccidentInfo_title {
+    font-size: 24px;
+  }
+  
+  .AccidentInfo_content {
+    padding: 20px 15px;
+  }
+  
+  .AccidentInfo_copyright {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  
+  .AccidentInfo_warning {
+    right: 80px;
+  }
+}
