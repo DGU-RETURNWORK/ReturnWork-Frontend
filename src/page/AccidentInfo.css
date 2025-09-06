@@ -1,0 +1,211 @@
+.AccidentInfo {
+  min-height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.AccidentInfo_header .wrapper_user button:last-child {
+  display: none;
+}
+
+.AccidentInfo_header {
+  position: relative;
+}
+
+.AccidentInfo_warning {
+  position: absolute;
+  top: 50%;
+  right: 120px;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.warning-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.warning-icon:hover {
+  transform: scale(1.1);
+}
+
+.AccidentInfo_content {
+  flex: 1;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.AccidentInfo_title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.AccidentInfo_form {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.AccidentInfo_form_left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.AccidentInfo_form_row {
+  display: flex;
+  gap: 20px;
+}
+
+.AccidentInfo_form_row > div {
+  flex: 1;
+}
+
+.AccidentInfo_form_right {
+  flex: 1;
+}
+
+.AccidentInfo_actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.AccidentInfo_step {
+  font-size: 14px;
+  color: #666666;
+  margin-top: 5px;
+}
+
+.AccidentInfo_footer {
+  margin-top: auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.AccidentInfo_copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 14px;
+  color: #666666;
+}
+
+.AccidentInfo_links {
+  display: flex;
+  gap: 20px;
+}
+
+.AccidentInfo_links a {
+  color: #666666;
+  text-decoration: none;
+}
+
+.AccidentInfo_links a:hover {
+  text-decoration: underline;
+}
+
+/* LabeledSelect 스타일 오버라이드 */
+.AccidentInfo .mb-4 {
+  margin-bottom: 0;
+}
+
+.AccidentInfo .block {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 8px;
+}
+
+.AccidentInfo select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #333333;
+  transition: border-color 0.2s ease;
+}
+
+.AccidentInfo select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* LabeledTextarea 스타일 오버라이드 */
+.AccidentInfo .textarea-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.AccidentInfo .textarea-label {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 8px;
+}
+
+.AccidentInfo .textarea-box {
+  flex: 1;
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 200px;
+  transition: border-color 0.2s ease;
+}
+
+.AccidentInfo .textarea-box:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.AccidentInfo .textarea-box::placeholder {
+  color: #999999;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .AccidentInfo_form {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .AccidentInfo_form_row {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .AccidentInfo_title {
+    font-size: 24px;
+  }
+  
+  .AccidentInfo_content {
+    padding: 20px 15px;
+  }
+  
+  .AccidentInfo_copyright {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
