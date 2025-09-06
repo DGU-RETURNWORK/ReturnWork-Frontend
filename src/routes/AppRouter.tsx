@@ -1,7 +1,7 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Home from "../page/Home";
-import CoverLetter from "../page/CoverLetter";
 import Mypage from "../page/Mypage";
+import AccidentInfo from "../page/AccidentInfo/AccidentInfo";
 
 
 function AppRouter() {
@@ -9,8 +9,8 @@ function AppRouter() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/cover_letter" element={<CoverLetter />} />
         <Route path="/my_page" element={<Mypage />} />
+        <Route path="/accident_info" element={<AccidentInfo />} />
       </Routes>
     </BrowserRouter>
   );
