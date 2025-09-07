@@ -6,15 +6,11 @@
   flex-direction: column;
 }
 
-/* 헤더 영역 */
-.SelfAssessment .wrapper_user button:last-child {
-  display: none;
-}
 
 /* 메인 콘텐츠 영역 */
 .SelfAssessment_content {
   flex: 1;
-  padding: 40px 20px;
+  padding: 40px 10px;
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
@@ -92,22 +88,39 @@
 }
 
 .SelfAssessment_question {
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+  padding: 16px 0;
+  border-bottom: 1px solid #f0f0f0;
 }
 
 .SelfAssessment_question:last-child {
   margin-bottom: 0;
+  border-bottom: none;
 }
 
-.SelfAssessment_checkbox_label {
+.SelfAssessment_question_text {
+  font-size: 16px;
+  color: #2c3e50;
+  font-weight: 500;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.SelfAssessment_rating {
   display: flex;
+  gap: 12px;
+  justify-content: flex-start;
+}
+
+.SelfAssessment_rating_label {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   cursor: pointer;
   position: relative;
-  padding-left: 32px;
 }
 
-.SelfAssessment_checkbox {
+.SelfAssessment_radio {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -115,44 +128,29 @@
   width: 0;
 }
 
-.SelfAssessment_checkmark {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 20px;
+.SelfAssessment_radio_custom {
   width: 20px;
+  height: 20px;
   background-color: #ffffff;
   border: 2px solid #ddd;
-  border-radius: 4px;
+  border-radius: 50%;
   transition: all 0.3s ease;
+  margin-bottom: 6px;
 }
 
-.SelfAssessment_checkbox_label:hover .SelfAssessment_checkmark {
+.SelfAssessment_rating_label:hover .SelfAssessment_radio_custom {
   border-color: #0146B1;
+  transform: scale(1.1);
 }
 
-.SelfAssessment_checkbox:checked ~ .SelfAssessment_checkmark {
+.SelfAssessment_radio:checked ~ .SelfAssessment_radio_custom {
   background-color: #0146B1;
   border-color: #0146B1;
 }
 
-.SelfAssessment_checkbox:checked ~ .SelfAssessment_checkmark:after {
-  content: "";
-  position: absolute;
-  display: block;
-  left: 6px;
-  top: 2px;
-  width: 6px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-}
-
-.SelfAssessment_question_text {
-  font-size: 16px;
-  color: #2c3e50;
+.SelfAssessment_score_text {
+  font-size: 14px;
+  color: #666666;
   font-weight: 500;
 }
 
