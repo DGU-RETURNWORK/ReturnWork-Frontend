@@ -1,0 +1,38 @@
+.Footer {
+  background-color: white;
+  padding: 4rem;
+}
+
+.InformationCard {
+  padding: 2rem;
+  gap: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.Information {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.Info_content {
+  background-color: #e4eefc;
+  min-width: 18rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  color: #6e7175;
+}
+
+.Footer_links {
+  border-top: 1px solid #d9d9d9;
+  padding: 1.5rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.Footer_link {
+  color: #6e7175;
+}
