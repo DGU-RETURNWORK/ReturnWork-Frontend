@@ -1,0 +1,236 @@
+/* SelfAssessment 페이지 스타일 */
+.SelfAssessment {
+  min-height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* 메인 콘텐츠 영역 */
+.SelfAssessment_content {
+  flex: 1;
+  padding: 40px 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.SelfAssessment_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.SelfAssessment_title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #000000;
+  margin: 0;
+}
+
+.SelfAssessment_progress {
+  font-size: 16px;
+  color: #666666;
+  font-weight: 500;
+  background-color: #f8f9fa;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+/* 폼 영역 */
+.SelfAssessment_form {
+  margin-bottom: 50px;
+}
+
+.SelfAssessment_section {
+  margin-bottom: 24px;
+  border: 1px solid #e8ecf0;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.SelfAssessment_section_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  background-color: #f8f9fa;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.SelfAssessment_section_header:hover {
+  background-color: #e9ecef;
+}
+
+.SelfAssessment_section_title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.SelfAssessment_arrow {
+  font-size: 14px;
+  color: #666666;
+  transition: transform 0.3s ease;
+}
+
+.SelfAssessment_arrow.expanded {
+  transform: rotate(180deg);
+}
+
+.SelfAssessment_questions {
+  padding: 0 24px 20px 24px;
+}
+
+.SelfAssessment_question {
+  margin-bottom: 24px;
+  padding: 16px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.SelfAssessment_question:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.SelfAssessment_question_text {
+  font-size: 16px;
+  color: #2c3e50;
+  font-weight: 500;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.SelfAssessment_rating {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-start;
+}
+
+.SelfAssessment_rating_label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.SelfAssessment_radio {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.SelfAssessment_radio_custom {
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  margin-bottom: 6px;
+}
+
+.SelfAssessment_rating_label:hover .SelfAssessment_radio_custom {
+  border-color: #0146B1;
+  transform: scale(1.1);
+}
+
+.SelfAssessment_radio:checked ~ .SelfAssessment_radio_custom {
+  background-color: #0146B1;
+  border-color: #0146B1;
+}
+
+.SelfAssessment_score_text {
+  font-size: 14px;
+  color: #666666;
+  font-weight: 500;
+}
+
+/* 액션 버튼 영역 */
+.SelfAssessment_actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 40px;
+}
+
+.SelfAssessment_button_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 푸터 영역 */
+.SelfAssessment_footer {
+  margin-top: auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.SelfAssessment_copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 14px;
+  color: #666666;
+}
+
+.SelfAssessment_links {
+  display: flex;
+  gap: 20px;
+}
+
+.SelfAssessment_links a {
+  color: #666666;
+  text-decoration: none;
+}
+
+.SelfAssessment_links a:hover {
+  text-decoration: underline;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .SelfAssessment_content {
+    padding: 20px 15px;
+  }
+  
+  .SelfAssessment_title {
+    font-size: 24px;
+  }
+  
+  .SelfAssessment_header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  
+  .SelfAssessment_section_header {
+    padding: 16px 20px;
+  }
+  
+  .SelfAssessment_questions {
+    padding: 0 20px 16px 20px;
+  }
+  
+  .SelfAssessment_actions {
+    margin-right: 0;
+    justify-content: center;
+  }
+  
+  .SelfAssessment_copyright {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
