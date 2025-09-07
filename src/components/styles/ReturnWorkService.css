@@ -1,0 +1,30 @@
+.returnwork_service {
+  background: #f3f7fa;
+  margin: 0;
+  padding: 50px;
+}
+
+.title {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.title h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}

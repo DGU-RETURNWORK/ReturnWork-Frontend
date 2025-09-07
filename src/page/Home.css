@@ -1,0 +1,48 @@
+.background {
+  background-color: #f3f7fa;
+  width: 100vw;
+}
+
+.header {
+  width: 100vw;
+  min-height: 300px;
+
+  background: radial-gradient(
+      circle 300px at 95% 85%,
+      #d8e5fb 0%,
+      transparent 80%
+    ),
+    radial-gradient(circle 450px at 3% 0%, #d8e5fb 0%, transparent 60%);
+  background-color: #f3f7fa;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 6rem;
+}
+
+.heroText {
+  max-width: 500px;
+}
+
+.heroText h4 {
+  color: #5a6a85;
+  margin-bottom: 1rem;
+}
+
+.heroText h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.heroText p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.heroImage img {
+  max-width: 400px;
+}
