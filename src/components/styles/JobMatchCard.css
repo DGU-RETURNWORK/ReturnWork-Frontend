@@ -1,0 +1,131 @@
+/* JobMatchCard 컴포넌트 스타일 */
+.JobMatchCard {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 300px;
+  width: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.JobMatchCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.JobMatchCard_category {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  letter-spacing: -0.01em;
+}
+
+.JobMatchCard_profile {
+  margin-bottom: 20px;
+}
+
+.JobMatchCard_profile_image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f0f0f0;
+}
+
+.JobMatchCard_reason {
+  font-size: 14px;
+  color: #2c3e50;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: left;
+  width: 100%;
+}
+
+.JobMatchCard_suitability {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.JobMatchCard_suitability_dot {
+  width: 8px;
+  height: 8px;
+  background-color: #4caf50;
+  border-radius: 50%;
+}
+
+.JobMatchCard_suitability_label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.JobMatchCard_suitability_score {
+  font-size: 14px;
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+.JobMatchCard_button {
+  background-color: #0146B1;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: 100%;
+}
+
+.JobMatchCard_button:hover {
+  background-color: #003d99;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .JobMatchCard {
+    max-width: 280px;
+    padding: 20px;
+  }
+  
+  .JobMatchCard_category {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .JobMatchCard_profile_image {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .JobMatchCard_reason {
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+  
+  .JobMatchCard_suitability {
+    margin-bottom: 16px;
+  }
+  
+  .JobMatchCard_suitability_label,
+  .JobMatchCard_suitability_score {
+    font-size: 13px;
+  }
+  
+  .JobMatchCard_button {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
