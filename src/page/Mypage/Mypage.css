@@ -255,3 +255,9 @@
     gap: 16px;
   }
 }
+
+.Mypage_edit_actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}

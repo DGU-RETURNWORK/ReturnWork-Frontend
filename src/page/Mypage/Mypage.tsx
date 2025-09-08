@@ -4,6 +4,7 @@ import RoundButton from '../../components/RoundButton';
 import './Mypage.css';
 
 const Mypage = () => {
+  const [isEditing, setIsEditing] = useState(false);
   const [formData, setFormData] = useState({
     name: '추상윤',
     phoneNumber: '010-',
@@ -14,6 +15,7 @@ const Mypage = () => {
     memoryPassword: '',
     deleteAccount: false
   });
+  const [originalData, setOriginalData] = useState(formData);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target;
@@ -27,9 +29,18 @@ const Mypage = () => {
     console.log('파일 선택');
   };
 
-  const handleSubmit = () => {
-    console.log('수정하기', formData);
+  const handleEdit = () => {
+    setIsEditing(true);
+    setOriginalData(formData); // 현재 데이터를 원본으로 저장
   };
+
+  const handleSave = () => {
+    // 여기서 실제 저장 로직을 구현할 수 있습니다
+    console.log('저장하기', formData);
+    setIsEditing(false);
+    setOriginalData(formData); // 저장된 데이터를 새로운 원본으로 설정
+  };
+
 
   return (
     <div className="Mypage">
@@ -55,6 +66,7 @@ const Mypage = () => {
                 value={formData.name}
                 onChange={handleInputChange}
                 className="Mypage_input"
+                disabled={!isEditing}
               />
             </div>
             
@@ -66,6 +78,7 @@ const Mypage = () => {
                 value={formData.phoneNumber}
                 onChange={handleInputChange}
                 className="Mypage_input"
+                disabled={!isEditing}
               />
             </div>
             
@@ -82,6 +95,7 @@ const Mypage = () => {
                   type="button"
                   onClick={handleFileSelect}
                   className="Mypage_file_button"
+                  disabled={!isEditing}
                 >
                   파일 선택
                 </button>
@@ -96,6 +110,7 @@ const Mypage = () => {
                 onChange={handleInputChange}
                 className="Mypage_textarea"
                 rows={4}
+                disabled={!isEditing}
               />
             </div>
           </div>
@@ -109,6 +124,7 @@ const Mypage = () => {
                 value={formData.email}
                 onChange={handleInputChange}
                 className="Mypage_input"
+                disabled={!isEditing}
               />
             </div>
             
@@ -121,6 +137,7 @@ const Mypage = () => {
                 onChange={handleInputChange}
                 placeholder="장소를 입력해 주세요"
                 className="Mypage_input"
+                disabled={!isEditing}
               />
             </div>
             
@@ -133,6 +150,7 @@ const Mypage = () => {
                   value={formData.birthday}
                   onChange={handleInputChange}
                   className="Mypage_input Mypage_date_input"
+                  disabled={!isEditing}
                 />
                 <div className="Mypage_calendar_icon"></div>
               </div>
@@ -149,6 +167,7 @@ const Mypage = () => {
                     onChange={handleInputChange}
                     className="Mypage_toggle_input"
                     id="deleteAccount"
+                    disabled={!isEditing}
                   />
                   <label htmlFor="deleteAccount" className="Mypage_toggle_label">
                     <span className="Mypage_toggle_slider"></span>
@@ -167,6 +186,7 @@ const Mypage = () => {
                 onChange={handleInputChange}
                 placeholder="추억 비밀번호를 입력해 주세요"
                 className="Mypage_input"
+                disabled={!isEditing}
               />
             </div>
           </div>
@@ -174,9 +194,9 @@ const Mypage = () => {
         
         <div className="Mypage_actions">
           <RoundButton
-            text="수정하기"
+            text={isEditing ? "저장하기" : "수정하기"}
             size="large"
-            onClick={handleSubmit}
+            onClick={isEditing ? handleSave : handleEdit}
           />
         </div>
       </div>
