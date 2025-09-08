@@ -27,7 +27,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 }
 
 .Mypage_form_left,
@@ -262,28 +262,35 @@
   justify-content: center;
 }
 
-/* 계정 삭제 버튼 */
+/* 수정하기 버튼 크기 조정 */
+.Mypage_actions .RoundButton_large {
+  width: 300px !important;
+}
+
+/* 수정하기/저장하기 버튼 호버 효과 */
+.Mypage_actions .RoundButton_large:hover {
+  background-color: #0763cc !important;
+  transition: all 0.1s ease !important;
+}
+
+/* 계정삭제 버튼 */
 .Mypage_delete_button {
   background-color: #dc3545;
   color: white;
   border: none;
-  padding: 12px 24px;
-  border-radius: 8px;
+  padding: 8px 10px;
+  border-radius: 6px;
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.2s ease;
-  width: 100%;
-  max-width: 200px;
+  transition: all 0.2s ease;
+  width: 90px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.Mypage_delete_button:hover {
-  background-color: #c82333;
-}
-
-.Mypage_delete_button:active {
-  background-color: #bd2130;
-}
 
 /* 모달 오버레이 */
 .Mypage_modal_overlay {

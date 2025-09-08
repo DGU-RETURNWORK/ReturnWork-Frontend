@@ -4,6 +4,7 @@ interface RoundButtonProps {
   text: string;
   status?: "active" | "inactive";
   size: "small" | "medium" | "large";
+  type?: "default" | "delete";
   onClick?: () => void;
 }
 
@@ -11,6 +12,7 @@ const RoundButton = ({
   text,
   status = "active",
   size="small",
+  type = "default",
   onClick,
 }: RoundButtonProps) => {
   return (
