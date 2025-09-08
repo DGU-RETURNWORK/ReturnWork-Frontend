@@ -1,0 +1,243 @@
+/* DiagnosisCheck 페이지 스타일 */
+.DiagnosisCheck {
+  height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* 헤더 영역 */
+.DiagnosisCheck .wrapper_user button:last-child {
+  display: none;
+}
+
+/* 메인 콘텐츠 영역 */
+.DiagnosisCheck_content {
+  flex: 1;
+  padding: 40px 20px 20px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.DiagnosisCheck_card {
+  background-color: #f0f8ff;
+  border-radius: 16px;
+  padding: 40px;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.DiagnosisCheck_intro {
+  font-size: 16px;
+  color: #2c3e50;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.DiagnosisCheck_results {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  padding-left: 70px;
+  padding-bottom: 30px;
+}
+
+.DiagnosisCheck_section_title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 24px;
+}
+
+/* 작업 유형 차트 */
+.DiagnosisCheck_chart {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.DiagnosisCheck_chart_item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.DiagnosisCheck_chart_label {
+  font-size: 16px;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.DiagnosisCheck_chart_bar_container {
+  position: relative;
+  height: 24px;
+  background-color: #e8ecf0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.DiagnosisCheck_chart_bar {
+  height: 100%;
+  background-color: #0146B1;
+  border-radius: 12px;
+  transition: width 0.8s ease;
+  position: relative;
+}
+
+.DiagnosisCheck_chart_percentage {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  font-weight: 600;
+  color: #2c3e50;
+  z-index: 2;
+}
+
+/* 가능한 직무 리스트 */
+.DiagnosisCheck_jobs_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.DiagnosisCheck_job_item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  font-size: 16px;
+  color: #2c3e50;
+  line-height: 1.5;
+}
+
+.DiagnosisCheck_job_item:last-child {
+  margin-bottom: 0;
+}
+
+.DiagnosisCheck_job_bullet {
+  width: 8px;
+  height: 8px;
+  background-color: #e74c3c;
+  border-radius: 50%;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+/* 액션 버튼 영역 */
+.DiagnosisCheck_actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.DiagnosisCheck_button_wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.DiagnosisCheck_step {
+  font-size: 14px;
+  color: #666666;
+  font-weight: 500;
+
+}
+
+/* 푸터 영역 */
+.DiagnosisCheck_footer {
+  margin-top: auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.DiagnosisCheck_copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 14px;
+  color: #666666;
+}
+
+.DiagnosisCheck_links {
+  display: flex;
+  gap: 20px;
+}
+
+.DiagnosisCheck_links a {
+  color: #666666;
+  text-decoration: none;
+}
+
+.DiagnosisCheck_links a:hover {
+  text-decoration: underline;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .DiagnosisCheck_content {
+    padding: 20px 15px;
+  }
+  
+  .DiagnosisCheck_card {
+    padding: 24px;
+  }
+  
+  .DiagnosisCheck_intro {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  
+  .DiagnosisCheck_results {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-left: 0;
+    padding-bottom: 0;
+  }
+  
+  .DiagnosisCheck_section_title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .DiagnosisCheck_chart {
+    gap: 16px;
+  }
+  
+  .DiagnosisCheck_chart_bar_container {
+    height: 20px;
+  }
+  
+  .DiagnosisCheck_chart_percentage {
+    font-size: 12px;
+    right: 8px;
+  }
+  
+  .DiagnosisCheck_job_item {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  
+  .DiagnosisCheck_actions {
+    justify-content: center;
+  }
+  
+  .DiagnosisCheck_copyright {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
