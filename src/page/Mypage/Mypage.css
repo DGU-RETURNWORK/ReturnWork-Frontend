@@ -1,0 +1,257 @@
+/* Mypage 컴포넌트 스타일 */
+.Mypage {
+  min-height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.Mypage_content {
+  flex: 1;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.Mypage_title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: -0.02em;
+}
+
+.Mypage_form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.Mypage_form_left,
+.Mypage_form_right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.Mypage_field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.Mypage_label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.Mypage_input {
+  padding: 12px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #1a1a1a;
+  background-color: #f8f9fa;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.Mypage_input:focus {
+  outline: none;
+  border-color: #0146B1;
+  box-shadow: 0 0 0 2px rgba(1, 70, 177, 0.1);
+}
+
+.Mypage_input::placeholder {
+  color: #999;
+}
+
+.Mypage_file_group {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.Mypage_file_input {
+  flex: 1;
+}
+
+.Mypage_file_button {
+  padding: 12px 16px;
+  background-color: #6c757d;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.Mypage_file_button:hover {
+  background-color: #5a6268;
+}
+
+.Mypage_textarea {
+  padding: 12px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #1a1a1a;
+  background-color: #f8f9fa;
+  resize: vertical;
+  min-height: 100px;
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.Mypage_textarea:focus {
+  outline: none;
+  border-color: #0146B1;
+  box-shadow: 0 0 0 2px rgba(1, 70, 177, 0.1);
+}
+
+.Mypage_date_group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.Mypage_date_input {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.Mypage_calendar_icon {
+  position: absolute;
+  right: 12px;
+  font-size: 16px;
+  color: #6c757d;
+  pointer-events: none;
+}
+
+.Mypage_toggle_group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.Mypage_toggle {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.Mypage_toggle_input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.Mypage_toggle_label {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.Mypage_toggle_label:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.Mypage_toggle_input:checked + .Mypage_toggle_label {
+  background-color: #dc3545;
+}
+
+.Mypage_toggle_input:checked + .Mypage_toggle_label:before {
+  transform: translateX(26px);
+}
+
+.Mypage_toggle_text {
+  font-size: 14px;
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+
+.Mypage_actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.Mypage_footer {
+  background-color: #f8f9fa;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #e9ecef;
+}
+
+.Mypage_copyright {
+  font-size: 12px;
+  color: #6c757d;
+}
+
+.Mypage_links {
+  display: flex;
+  gap: 20px;
+}
+
+.Mypage_link {
+  font-size: 12px;
+  color: #6c757d;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.Mypage_link:hover {
+  color: #0146B1;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .Mypage_form {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .Mypage_content {
+    padding: 20px 16px;
+  }
+  
+  .Mypage_title {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  
+  .Mypage_footer {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  
+  .Mypage_links {
+    gap: 16px;
+  }
+}
