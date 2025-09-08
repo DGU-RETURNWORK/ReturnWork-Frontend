@@ -4,6 +4,7 @@ import Mypage from "../page/Mypage";
 import AccidentInfo from "../page/AccidentInfo/AccidentInfo";
 import SelfAssessment from "../page/SelfAssessment/SelfAssessment";
 import DiagnosisCheck from "../page/DiagnosisCheck/DiagnosisCheck";
+import JobMatch from "../page/JobMatch/JobMatch";
 
 
 function AppRouter() {
@@ -15,6 +16,7 @@ function AppRouter() {
         <Route path="/accident_info" element={<AccidentInfo />} />
         <Route path="/self_assessment" element={<SelfAssessment />} />
         <Route path="/diagnosis_check" element={<DiagnosisCheck />} />
+        <Route path="/job_match" element={<JobMatch />} />
       </Routes>
     </BrowserRouter>
   );

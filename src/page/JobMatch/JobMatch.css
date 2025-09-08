@@ -1,0 +1,247 @@
+/* JobMatch 페이지 스타일 */
+.JobMatch {
+  height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* 헤더 영역 */
+.JobMatch .wrapper_user button:last-child {
+  display: none;
+}
+
+/* 메인 콘텐츠 영역 */
+.JobMatch_content {
+  flex: 1;
+  padding: 40px 20px 20px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.JobMatch_text_group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
+.JobMatch_title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #1a1a1a;
+  text-align: left;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.JobMatch_intro_section {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  gap: 400px;
+  padding: 40px 0 20px 0;
+}
+
+.JobMatch_intro {
+  font-size: 14px;
+  color: #2c3e50;
+  line-height: 1.5;
+  text-align: left;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.JobMatch_intro_button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.JobMatch_slider_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.JobMatch_cards {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.JobMatch_slider_button {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #6c757d;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: absolute;
+  z-index: 2;
+}
+
+.JobMatch_slider_button:hover:not(:disabled) {
+  background-color: #e9ecef;
+  color: #495057;
+  transform: scale(1.05);
+}
+
+.JobMatch_slider_button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.JobMatch_slider_button_prev {
+  left: -60px;
+}
+
+.JobMatch_slider_button_next {
+  right: -60px;
+}
+
+.JobMatch_slider_dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 15px;
+}
+
+.JobMatch_slider_dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background-color: #dee2e6;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.JobMatch_slider_dot.active {
+  background-color: #0146B1;
+}
+
+.JobMatch_slider_dot:hover {
+  background-color: #adb5bd;
+}
+
+.JobMatch_step {
+  font-size: 14px;
+  color: #666666;
+  font-weight: 500;
+}
+
+/* 푸터 영역 */
+.JobMatch_footer {
+  margin-top: auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.JobMatch_copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 14px;
+  color: #666666;
+}
+
+.JobMatch_links {
+  display: flex;
+  gap: 20px;
+}
+
+.JobMatch_links a {
+  color: #666666;
+  text-decoration: none;
+}
+
+.JobMatch_links a:hover {
+  text-decoration: underline;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1024px) {
+  .JobMatch_cards {
+    gap: 24px;
+  }
+  
+  .JobMatch_slider_button_prev {
+    left: -50px;
+  }
+  
+  .JobMatch_slider_button_next {
+    right: -50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .JobMatch_content {
+    padding: 40px 15px 30px 15px;
+  }
+  
+  .JobMatch_title {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+  
+  .JobMatch_intro_section {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 32px;
+  }
+  
+  .JobMatch_intro {
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .JobMatch_slider_container {
+    margin-bottom: 30px;
+  }
+  
+  .JobMatch_cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .JobMatch_slider_button {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .JobMatch_title {
+    font-size: 20px;
+  }
+  
+  .JobMatch_intro {
+    font-size: 13px;
+  }
+}

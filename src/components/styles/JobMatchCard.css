@@ -1,0 +1,142 @@
+/* JobMatchCard 컴포넌트 스타일 */
+.JobMatchCard {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 280px;
+  width: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+
+.JobMatchCard_category {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+.JobMatchCard_profile {
+  margin-bottom: 16px;
+}
+
+.JobMatchCard_profile_image {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #f0f0f0;
+  display: block;
+  background-color: #f8f9fa;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23dee2e6"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>');
+  background-size: 35px 35px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.JobMatchCard_reason {
+  font-size: 13px;
+  color: #2c3e50;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  text-align: left;
+  width: 100%;
+}
+
+.JobMatchCard_reason_title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.JobMatchCard_suitability {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.JobMatchCard_suitability_dot {
+  width: 6px;
+  height: 6px;
+  background-color: #4caf50;
+  border-radius: 50%;
+}
+
+.JobMatchCard_suitability_label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.JobMatchCard_suitability_score {
+  font-size: 13px;
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+.JobMatchCard_button {
+  background-color: #0146B1;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: 100%;
+}
+
+.JobMatchCard_button:hover {
+  background-color: #003d99;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .JobMatchCard {
+    max-width: 280px;
+    padding: 20px;
+  }
+  
+  .JobMatchCard_category {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .JobMatchCard_profile_image {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .JobMatchCard_reason {
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+  
+  .JobMatchCard_suitability {
+    margin-bottom: 16px;
+  }
+  
+  .JobMatchCard_suitability_label,
+  .JobMatchCard_suitability_score {
+    font-size: 13px;
+  }
+  
+  .JobMatchCard_button {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
