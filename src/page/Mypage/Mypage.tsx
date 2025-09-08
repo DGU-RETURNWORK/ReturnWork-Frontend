@@ -5,6 +5,8 @@ import './Mypage.css';
 
 const Mypage = () => {
   const [isEditing, setIsEditing] = useState(false);
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
+  const [deletePassword, setDeletePassword] = useState('');
   const [formData, setFormData] = useState({
     name: '추상윤',
     phoneNumber: '010-',
@@ -12,8 +14,7 @@ const Mypage = () => {
     address: '',
     birthday: '2003-03-03',
     career: '1년간 요식업 근무 경험',
-    memoryPassword: '',
-    deleteAccount: false
+    memoryPassword: ''
   });
   const [originalData, setOriginalData] = useState(formData);
 
@@ -39,6 +40,27 @@ const Mypage = () => {
     console.log('저장하기', formData);
     setIsEditing(false);
     setOriginalData(formData); // 저장된 데이터를 새로운 원본으로 설정
+  };
+
+  const handleDeleteAccount = () => {
+    setShowDeleteModal(true);
+  };
+
+  const handleDeleteConfirm = () => {
+    // 여기서 실제 패스워드 확인 로직을 구현할 수 있습니다
+    if (deletePassword === 'correctPassword') { // 실제로는 서버에서 확인
+      console.log('계정 삭제 완료');
+      setShowDeleteModal(false);
+      setDeletePassword('');
+      // 실제 삭제 로직 구현
+    } else {
+      alert('패스워드가 일치하지 않습니다.');
+    }
+  };
+
+  const handleDeleteCancel = () => {
+    setShowDeleteModal(false);
+    setDeletePassword('');
   };
 
 
@@ -158,23 +180,13 @@ const Mypage = () => {
             
             <div className="Mypage_field">
               <label className="Mypage_label">계정 영구 삭제</label>
-              <div className="Mypage_toggle_group">
-                <div className="Mypage_toggle">
-                  <input
-                    type="checkbox"
-                    name="deleteAccount"
-                    checked={formData.deleteAccount}
-                    onChange={handleInputChange}
-                    className="Mypage_toggle_input"
-                    id="deleteAccount"
-                    disabled={!isEditing}
-                  />
-                  <label htmlFor="deleteAccount" className="Mypage_toggle_label">
-                    <span className="Mypage_toggle_slider"></span>
-                  </label>
-                </div>
-                <span className="Mypage_toggle_text">삭제</span>
-              </div>
+              <button
+                type="button"
+                onClick={handleDeleteAccount}
+                className="Mypage_delete_button"
+              >
+                계정 삭제
+              </button>
             </div>
             
             <div className="Mypage_field">
@@ -208,6 +220,55 @@ const Mypage = () => {
           <a href="#" className="Mypage_link">Terms of Service</a>
         </div>
       </div>
+
+      {/* 계정 삭제 확인 모달 */}
+      {showDeleteModal && (
+        <div className="Mypage_modal_overlay">
+          <div className="Mypage_modal">
+            <div className="Mypage_modal_header">
+              <h3 className="Mypage_modal_title">계정 영구 삭제</h3>
+              <button 
+                className="Mypage_modal_close"
+                onClick={handleDeleteCancel}
+              >
+                ×
+              </button>
+            </div>
+            <div className="Mypage_modal_content">
+              <p className="Mypage_modal_text">
+                계정을 영구적으로 삭제하시겠습니까?
+              </p>
+              <p className="Mypage_modal_warning">
+                이 작업은 되돌릴 수 없습니다. 모든 데이터가 영구적으로 삭제됩니다.
+              </p>
+              <div className="Mypage_modal_input_group">
+                <label className="Mypage_modal_label">비밀번호 확인</label>
+                <input
+                  type="password"
+                  value={deletePassword}
+                  onChange={(e) => setDeletePassword(e.target.value)}
+                  placeholder="비밀번호를 입력하세요"
+                  className="Mypage_modal_input"
+                />
+              </div>
+            </div>
+            <div className="Mypage_modal_actions">
+              <button
+                className="Mypage_modal_button Mypage_modal_button_cancel"
+                onClick={handleDeleteCancel}
+              >
+                취소
+              </button>
+              <button
+                className="Mypage_modal_button Mypage_modal_button_confirm"
+                onClick={handleDeleteConfirm}
+              >
+                삭제
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

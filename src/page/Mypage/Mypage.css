@@ -261,3 +261,181 @@
   gap: 12px;
   justify-content: center;
 }
+
+/* 계정 삭제 버튼 */
+.Mypage_delete_button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: 100%;
+  max-width: 200px;
+}
+
+.Mypage_delete_button:hover {
+  background-color: #c82333;
+}
+
+.Mypage_delete_button:active {
+  background-color: #bd2130;
+}
+
+/* 모달 오버레이 */
+.Mypage_modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* 모달 */
+.Mypage_modal {
+  background: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 모달 헤더 */
+.Mypage_modal_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.Mypage_modal_title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.Mypage_modal_close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #6c757d;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.Mypage_modal_close:hover {
+  background-color: #f8f9fa;
+}
+
+/* 모달 내용 */
+.Mypage_modal_content {
+  padding: 20px 24px;
+}
+
+.Mypage_modal_text {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.Mypage_modal_warning {
+  margin: 0 0 20px 0;
+  font-size: 14px;
+  color: #dc3545;
+  line-height: 1.4;
+}
+
+.Mypage_modal_input_group {
+  margin-bottom: 20px;
+}
+
+.Mypage_modal_label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.Mypage_modal_input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.Mypage_modal_input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+/* 모달 액션 버튼들 */
+.Mypage_modal_actions {
+  display: flex;
+  gap: 12px;
+  padding: 16px 24px 24px;
+  justify-content: flex-end;
+}
+
+.Mypage_modal_button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 80px;
+}
+
+.Mypage_modal_button_cancel {
+  background-color: #6c757d;
+  color: white;
+}
+
+.Mypage_modal_button_cancel:hover {
+  background-color: #5a6268;
+}
+
+.Mypage_modal_button_confirm {
+  background-color: #dc3545;
+  color: white;
+}
+
+.Mypage_modal_button_confirm:hover {
+  background-color: #c82333;
+}
