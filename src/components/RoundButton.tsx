@@ -17,7 +17,7 @@ const RoundButton = ({
 }: RoundButtonProps) => {
   return (
     <button
-      className={`RoundButton RoundButton_${status} RoundButton_${size}`}
+      className={`RoundButton RoundButton_${status} RoundButton_${size} ${type === "delete" ? "RoundButton_delete" : ""}`}
       onClick={onClick}
     >
       <span className="text">{text}</span>

@@ -7,6 +7,8 @@ const Mypage = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [deletePassword, setDeletePassword] = useState('');
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     name: '추상윤',
     phoneNumber: '010-',
@@ -16,7 +18,6 @@ const Mypage = () => {
     career: '1년간 요식업 근무 경험',
     memoryPassword: ''
   });
-  const [originalData, setOriginalData] = useState(formData);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target;
@@ -27,19 +28,30 @@ const Mypage = () => {
   };
 
   const handleFileSelect = () => {
-    console.log('파일 선택');
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = 'image/*';
+    input.onchange = (e) => {
+      const file = (e.target as HTMLInputElement).files?.[0];
+      if (file) {
+        setSelectedFile(file);
+        // 이미지 미리보기 URL 생성
+        const url = URL.createObjectURL(file);
+        setPreviewUrl(url);
+        console.log('선택된 파일:', file.name);
+      }
+    };
+    input.click();
   };
 
   const handleEdit = () => {
     setIsEditing(true);
-    setOriginalData(formData); // 현재 데이터를 원본으로 저장
   };
 
   const handleSave = () => {
     // 여기서 실제 저장 로직을 구현할 수 있습니다
     console.log('저장하기', formData);
     setIsEditing(false);
-    setOriginalData(formData); // 저장된 데이터를 새로운 원본으로 설정
   };
 
   const handleDeleteAccount = () => {
@@ -110,6 +122,7 @@ const Mypage = () => {
                 <input
                   type="text"
                   placeholder="파일을 선택해 주세요"
+                  value={selectedFile ? selectedFile.name : ''}
                   className="Mypage_input Mypage_file_input"
                   readOnly
                 />
@@ -122,6 +135,15 @@ const Mypage = () => {
                   파일 선택
                 </button>
               </div>
+              {previewUrl && (
+                <div className="Mypage_image_preview">
+                  <img 
+                    src={previewUrl} 
+                    alt="미리보기" 
+                    className="Mypage_preview_image"
+                  />
+                </div>
+              )}
             </div>
             
             <div className="Mypage_field">
@@ -157,7 +179,7 @@ const Mypage = () => {
                 name="address"
                 value={formData.address}
                 onChange={handleInputChange}
-                placeholder="장소를 입력해 주세요"
+                placeholder="주소를 입력해 주세요"
                 className="Mypage_input"
                 disabled={!isEditing}
               />
