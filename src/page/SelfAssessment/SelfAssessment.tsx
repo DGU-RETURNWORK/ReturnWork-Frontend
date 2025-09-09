@@ -73,11 +73,6 @@ const SelfAssessment = () => {
         // 다음 단계로 이동하는 로직
     };
 
-    const handleSave = () => {
-        console.log("임시저장:", answers);
-        // 임시저장 로직
-        alert("임시저장되었습니다.");
-    };
 
   const isFormValid = () => {
     return Object.values(answers).every(answer => answer > 0);
@@ -92,7 +87,6 @@ const SelfAssessment = () => {
                 onMenuClick={() => console.log("메뉴 클릭")}
                 onBackClick={() => console.log("뒤로가기")}
                 onUserClick={() => console.log("사용자 클릭")}
-                onSaveClick={handleSave}
             />
 
             <div className="SelfAssessment_content">

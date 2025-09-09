@@ -1,0 +1,468 @@
+/* Mypage 컴포넌트 스타일 */
+.Mypage {
+  min-height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.Mypage_content {
+  flex: 1;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.Mypage_title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: -0.02em;
+}
+
+.Mypage_form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.Mypage_form_left,
+.Mypage_form_right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.Mypage_field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.Mypage_label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.Mypage_input {
+  padding: 12px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #1a1a1a;
+  background-color: #f8f9fa;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.Mypage_input:disabled {
+  background-color: #ffffff;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.Mypage_input:focus {
+  outline: none;
+  border-color: #0146B1;
+  box-shadow: 0 0 0 2px rgba(1, 70, 177, 0.1);
+}
+
+.Mypage_input::placeholder {
+  color: #999;
+}
+
+.Mypage_file_group {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.Mypage_file_input {
+  flex: 1;
+}
+
+.Mypage_file_button {
+  padding: 12px 16px;
+  background-color: #6c757d;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.Mypage_file_button:hover {
+  background-color: #5a6268;
+}
+
+.Mypage_textarea {
+  padding: 12px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #1a1a1a;
+  background-color: #f8f9fa;
+  resize: vertical;
+  min-height: 100px;
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.Mypage_textarea:focus {
+  outline: none;
+  border-color: #0146B1;
+  box-shadow: 0 0 0 2px rgba(1, 70, 177, 0.1);
+}
+
+.Mypage_date_group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.Mypage_date_input {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.Mypage_calendar_icon {
+  position: absolute;
+  right: 12px;
+  font-size: 16px;
+  color: #6c757d;
+  pointer-events: none;
+}
+
+.Mypage_toggle_group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.Mypage_toggle {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.Mypage_toggle_input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.Mypage_toggle_label {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.Mypage_toggle_label:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.Mypage_toggle_input:checked + .Mypage_toggle_label {
+  background-color: #dc3545;
+}
+
+.Mypage_toggle_input:checked + .Mypage_toggle_label:before {
+  transform: translateX(26px);
+}
+
+.Mypage_toggle_text {
+  font-size: 14px;
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+
+.Mypage_actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.Mypage_footer {
+  background-color: #f8f9fa;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #e9ecef;
+}
+
+.Mypage_copyright {
+  font-size: 12px;
+  color: #6c757d;
+}
+
+.Mypage_links {
+  display: flex;
+  gap: 20px;
+}
+
+.Mypage_link {
+  font-size: 12px;
+  color: #6c757d;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.Mypage_link:hover {
+  color: #0146B1;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .Mypage_form {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .Mypage_content {
+    padding: 20px 16px;
+  }
+  
+  .Mypage_title {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  
+  .Mypage_footer {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  
+  .Mypage_links {
+    gap: 16px;
+  }
+}
+
+.Mypage_edit_actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+/* 수정하기 버튼 크기 조정 */
+.Mypage_actions .RoundButton_large {
+  width: 300px !important;
+}
+
+/* 수정하기/저장하기 버튼 호버 효과 */
+.Mypage_actions .RoundButton_large:hover {
+  background-color: #0763cc !important;
+  transition: all 0.1s ease !important;
+}
+
+/* 계정삭제 버튼 */
+.Mypage_delete_button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 90px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* 모달 오버레이 */
+.Mypage_modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* 모달 */
+.Mypage_modal {
+  background: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 모달 헤더 */
+.Mypage_modal_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.Mypage_modal_title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.Mypage_modal_close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #6c757d;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.Mypage_modal_close:hover {
+  background-color: #f8f9fa;
+}
+
+/* 모달 내용 */
+.Mypage_modal_content {
+  padding: 20px 24px;
+}
+
+.Mypage_modal_text {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.Mypage_modal_warning {
+  margin: 0 0 20px 0;
+  font-size: 14px;
+  color: #dc3545;
+  line-height: 1.4;
+}
+
+.Mypage_modal_input_group {
+  margin-bottom: 20px;
+}
+
+.Mypage_modal_label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.Mypage_modal_input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.Mypage_modal_input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+/* 모달 액션 버튼들 */
+.Mypage_modal_actions {
+  display: flex;
+  gap: 12px;
+  padding: 16px 24px 24px;
+  justify-content: flex-end;
+}
+
+.Mypage_modal_button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 80px;
+}
+
+.Mypage_modal_button_cancel {
+  background-color: #6c757d;
+  color: white;
+}
+
+.Mypage_modal_button_cancel:hover {
+  background-color: #5a6268;
+}
+
+.Mypage_modal_button_confirm {
+  background-color: #dc3545;
+  color: white;
+}
+
+.Mypage_modal_button_confirm:hover {
+  background-color: #c82333;
+}
+
+/* 이미지 미리보기 */
+.Mypage_image_preview {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.Mypage_preview_image {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  object-fit: cover;
+}

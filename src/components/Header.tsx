@@ -10,7 +10,6 @@ interface HeaderProps {
   onLoginClick?: () => void;
   onSignUpClick?: () => void;
   onUserClick?: () => void;
-  onSaveClick?: () => void;
 }
 
 const Header = ({
@@ -22,7 +21,6 @@ const Header = ({
   onLoginClick,
   onSignUpClick,
   onUserClick,
-  onSaveClick,
 }: HeaderProps) => {
   return (
     <header className="Header">
@@ -43,9 +41,6 @@ const Header = ({
         {isLogin ? (
           <div className="wrapper_user">
             <Button text={userName!} icon={true} onClick={onUserClick} />
-            {withBack && (
-              <Button text="임시저장" onClick={onSaveClick} status="inactive" />
-            )}
           </div>
         ) : (
           <div className="wrapper_login">

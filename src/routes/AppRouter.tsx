@@ -1,6 +1,6 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Home from "../page/Home";
-import Mypage from "../page/Mypage";
+import Mypage from "../page/Mypage/Mypage";
 import AccidentInfo from "../page/AccidentInfo/AccidentInfo";
 import SelfAssessment from "../page/SelfAssessment/SelfAssessment";
 import DiagnosisCheck from "../page/DiagnosisCheck/DiagnosisCheck";
