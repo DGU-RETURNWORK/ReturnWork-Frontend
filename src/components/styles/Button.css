@@ -3,7 +3,6 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  height: 45px;
   padding: 12px 20px;
   border: none;
   border-radius: 8px;
@@ -20,15 +19,28 @@
 
 .Button_small {
   width: 85;
+  height: 45px;
 }
 .Button_medium {
   width: 140px;
+  height: 45px;
+}
+.Button_large {
+  width: 21rem;
+  height: 2rem;
 }
 
 .Button .icon {
   margin-top: 3px;
   font-size: 22px;
 }
-.Button .text {
+
+.Button_small .text {
   font-size: 16px;
+}
+.Button_medium .text {
+  font-size: 16px;
+}
+.Button_large .text {
+  font-size: 12px;
 }

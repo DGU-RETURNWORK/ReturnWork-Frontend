@@ -4,7 +4,7 @@ import { IoPersonCircleOutline } from "react-icons/io5";
 interface ButtonProps {
   text: string;
   status?: "active" | "inactive";
-  size?: "small" | "medium";
+  size?: "small" | "medium" | "large";
   icon?: boolean;
   onClick?: () => void;
 }

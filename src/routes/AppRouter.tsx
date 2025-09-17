@@ -5,13 +5,16 @@ import AccidentInfo from "../page/AccidentInfo/AccidentInfo";
 import SelfAssessment from "../page/SelfAssessment/SelfAssessment";
 import DiagnosisCheck from "../page/DiagnosisCheck/DiagnosisCheck";
 import JobMatch from "../page/JobMatch/JobMatch";
-
+import Login from "../page/Auth/Login";
+import Signup from "../page/Auth/Signup";
 
 function AppRouter() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/auth/login" element={<Login />} />
+        <Route path="/auth/signup" element={<Signup />} />
         <Route path="/my_page" element={<Mypage />} />
         <Route path="/accident_info" element={<AccidentInfo />} />
         <Route path="/self_assessment" element={<SelfAssessment />} />
