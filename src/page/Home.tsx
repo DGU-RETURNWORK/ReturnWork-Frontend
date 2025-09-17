@@ -3,12 +3,27 @@ import "./Home.css";
 import heroImg from "../assets/images/hero.png";
 import ReturnWorkService from "../components/ReturnWorkService";
 import Footer from "../components/Footer";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const nav = useNavigate();
+
+  const onLoginClick = () => {
+    nav("/auth/login");
+  };
+  const onSignUpClick = () => {
+    nav("/auth/signup");
+  };
+
   return (
     <div className="background">
       <div className="header">
-        <Header isLogin={false} withBack={false} />
+        <Header
+          isLogin={false}
+          withBack={false}
+          onLoginClick={onLoginClick}
+          onSignUpClick={onSignUpClick}
+        />
         <div className="hero">
           <div className="heroText">
             <h4>리턴워크</h4>

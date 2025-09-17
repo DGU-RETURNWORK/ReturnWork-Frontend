@@ -1,0 +1,72 @@
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.left {
+  flex: 1;
+  background-color: #e4eefc;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right .login {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.login .title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.login .input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.login .button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: #718096;
+  font-size: 10px;
+}
+
+.divider .line {
+  flex: 1;
+  height: 0.5px;
+  background-color: #718096;
+}
+
+.divider .divider_text {
+  margin: 0 10px;
+  color: #718096;
+  white-space: nowrap;
+}
+
+.login .button .signup {
+  margin: 5rem;
+  font-size: 10px;
+  color: #718096;
+}
+
+.login .button .signup .link {
+  color: #718096;
+}

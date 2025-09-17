@@ -1,0 +1,12 @@
+.input-large {
+  width: 20rem;
+  height: 1.3rem;
+}
+
+.input-field {
+  color: #7a828a;
+  background-color: #edf2f7;
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.6rem;
+}
