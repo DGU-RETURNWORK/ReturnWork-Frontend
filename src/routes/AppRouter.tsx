@@ -6,7 +6,8 @@ import SelfAssessment from "../page/SelfAssessment/SelfAssessment";
 import DiagnosisCheck from "../page/DiagnosisCheck/DiagnosisCheck";
 import JobMatch from "../page/JobMatch/JobMatch";
 import Login from "../page/Auth/Login";
-import Signup from "../page/Auth/Signup";
+import Step1 from "../page/Auth/Signup/Step1";
+import SignupLayout from "../page/Auth/Signup/index";
 
 function AppRouter() {
   return (
@@ -14,7 +15,10 @@ function AppRouter() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/auth/login" element={<Login />} />
-        <Route path="/auth/signup" element={<Signup />} />
+
+        <Route path="/auth/signup" element={<SignupLayout />} />
+        <Route path="/auth/signup/step1" element={<Step1 />} />
+
         <Route path="/my_page" element={<Mypage />} />
         <Route path="/accident_info" element={<AccidentInfo />} />
         <Route path="/self_assessment" element={<SelfAssessment />} />
