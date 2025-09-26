@@ -32,7 +32,11 @@ const Step1 = () => {
             />
           </section>
           <section className="button">
-            <Button text="계속하기" size="large" onClick={() => nav("/")} />
+            <Button
+              text="계속하기"
+              size="large"
+              onClick={() => nav("/auth/signup/step2")}
+            />
           </section>
         </section>
       </div>
