@@ -6,6 +6,7 @@ interface CustomInputProps {
   icon?: React.ReactNode;
   error?: string;
   placeholder?: string;
+  disabled?: boolean;
   onIconPress?: () => void;
 }
 
@@ -14,6 +15,7 @@ export default function CustomInput({
   icon,
   error,
   placeholder,
+  disabled,
   onIconPress,
 }: CustomInputProps) {
   return (
@@ -21,6 +23,7 @@ export default function CustomInput({
       <input
         className={`input-field input-${size}`}
         placeholder={placeholder}
+        disabled={disabled}
       />
       <div className="input-icon" onClick={onIconPress}>
         {icon}

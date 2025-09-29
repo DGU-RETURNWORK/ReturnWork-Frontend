@@ -1,3 +1,18 @@
+.input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.input-small {
+  width: 4rem;
+}
+
+.input-medium {
+  width: 7rem;
+}
+
 .input-large {
   width: 20rem;
   height: 1.3rem;
@@ -9,4 +24,19 @@
   border: none;
   border-radius: 0.2rem;
   padding: 0.6rem;
+}
+
+.input-icon {
+  position: absolute;
+  cursor: pointer;
+  color: #7a828a;
+}
+.input-small .input-icon {
+  top: 15%;
+  right: -0.2rem;
+}
+.input-large .input-icon {
+  top: 90%;
+  right: -0.2rem;
+  transform: translateY(-50%);
 }
