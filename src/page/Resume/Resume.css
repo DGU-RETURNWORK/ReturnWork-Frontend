@@ -15,7 +15,7 @@
 .Resume_card_date { color:#94A3B8; font-size:12px; }
 
 /* 상세 상단 필드 */
-.Resume_filters { display:grid; grid-template-columns: 520px 1fr 72px; grid-template-rows: auto auto; gap:20px 20px; align-items:start; margin: 8px 0 28px; }
+.Resume_filters { display:grid; grid-template-columns: 400px 1fr 92px; grid-template-rows: auto auto; gap:20px 20px; align-items:start; margin: 8px 25px 28px; }
 /* 좌측 2행: 직무선택 / 강조할 역량 */
 .Resume_filters .Resume_field:nth-child(1) { grid-column: 1 / 2; grid-row: 1 / 2; }
 .Resume_filters .Resume_field:nth-child(3) { grid-column: 1 / 2; grid-row: 2 / 3; }
@@ -28,7 +28,7 @@
 .Resume_filters .Resume_field label { font-size:14px; font-weight:700; color:#0F172A; letter-spacing:-0.01em; }
 .Resume_field input, .Resume_field textarea, .Resume_field select { border:1px solid #E6EAF0; border-radius:10px; padding:12px 14px; font-size:14px; background:#fff; transition:border-color .2s ease, box-shadow .2s ease; }
 .Resume_filters .Resume_field input,
-.Resume_filters .Resume_field select { border-radius:10px; padding:10px 12px; font-size:14px; box-shadow: 0 1px 3px rgba(16,24,40,0.03); }
+.Resume_filters .Resume_field select { border-radius:12px; padding:14px 16px; font-size:16px; box-shadow: 0 1px 3px rgba(16,24,40,0.03); }
 .Resume_filters .Resume_field textarea { border-radius:10px; padding:12px 14px; font-size:14px; box-shadow: 0 1px 3px rgba(16,24,40,0.03); }
 .Resume_filters .Resume_field input::placeholder,
 .Resume_filters .Resume_field textarea::placeholder { color:#9aa3b2; font-weight:500; }
@@ -38,6 +38,7 @@
 /* 문항 화면 레이아웃 */
 .Resume_question_container { max-width: 1200px; margin: 0 auto; padding: 24px 20px 36px; display:grid; grid-template-columns: 360px 1fr; gap: 20px; }
 .Resume_question_left { display:flex; flex-direction:column; gap: 24px; }
+.Resume_question_left .Resume_field textarea { min-height:240px; }
 .Resume_actions { display:flex; gap:8px; align-items:center; }
 .Resume_input_small { border:1px solid #E6EAF0; border-radius:10px; padding:12px 14px; width:260px; }
 .Resume_confirm { border:1px solid #cfd6e2; background:#fff; padding:12px 18px; border-radius:12px; cursor:pointer; }
