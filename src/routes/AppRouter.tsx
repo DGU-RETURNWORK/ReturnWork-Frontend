@@ -6,6 +6,9 @@ import SelfAssessment from "../page/SelfAssessment/SelfAssessment";
 import DiagnosisCheck from "../page/DiagnosisCheck/DiagnosisCheck";
 import JobMatch from "../page/JobMatch/JobMatch";
 import Login from "../page/Auth/Login";
+import ResumeList from "../page/Resume/ResumeList";
+import ResumeDetail from "../page/Resume/ResumeDetail";
+import ResumeQuestion from "../page/Resume/ResumeQuestion";
 import Step1 from "../page/Auth/Signup/Step1";
 import SignupLayout from "../page/Auth/Signup/index";
 import Step2 from "../page/Auth/Signup/Step2";
@@ -26,6 +29,9 @@ function AppRouter() {
         <Route path="/self_assessment" element={<SelfAssessment />} />
         <Route path="/diagnosis_check" element={<DiagnosisCheck />} />
         <Route path="/job_match" element={<JobMatch />} />
+        <Route path="/resume" element={<ResumeList />} />
+        <Route path="/resume/:resumeId" element={<ResumeDetail />} />
+        <Route path="/resume/:resumeId/question/:questionId" element={<ResumeQuestion />} />
       </Routes>
     </BrowserRouter>
   );
