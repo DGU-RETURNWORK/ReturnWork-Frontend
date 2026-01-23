@@ -1,12 +1,13 @@
 import type React from "react";
 import "./styles/CustomInput.css";
 
-interface CustomInputProps {
-  size: "large" | "medium" | "small" | "auto";
+interface CustomInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  inputSize: "large" | "medium" | "small" | "auto";
   icon?: React.ReactNode;
   error?: string;
   placeholder?: string;
   disabled?: boolean;
+  type?: string;
   onIconPress?: () => void;
 }
 
@@ -16,21 +17,27 @@ export default function CustomInput({
   error,
   placeholder,
   disabled,
+  type,
   onIconPress,
+  ...rest
 }: CustomInputProps) {
   return (
-    <div className={`input input-${size}`}>
-      <input
-        className={`input-field input-${size}`}
-        placeholder={placeholder}
-        disabled={disabled}
-      />
-      <div className="input-icon" onClick={onIconPress}>
-        {icon}
+    <div className={`input-wrapper input-${size}`}>
+      <div className={`input-container ${error ? "has-error" : ""}`}>
+        <input
+          className={`input-field input-${size}`}
+          placeholder={placeholder}
+          disabled={disabled}
+          type={type}
+          {...rest}
+        />
+        {icon && (
+          <div className="input-icon" onClick={onIconPress}>
+            {icon}
+          </div>
+        )}
       </div>
-      <div className="input-error">
-        {Boolean(error) && <text>{error}</text>}
-      </div>
+      {Boolean(error) && <div className="input-error">{error}</div>}
     </div>
   );
 }
